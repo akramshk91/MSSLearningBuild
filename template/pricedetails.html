@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Pricing Details{% endblock title %}
+{% block Css %}
+
+  <style>
+  p {
+    background-color: white;color: green;
+    font-family: courier;
+    font-size: 100%;
+    border: 2px solid powderblue;
+    }
+  h1   {color: blue;}
+  
+  </style>
+  {% endblock Css %}
+{% block body %}
+<ul>
+  {% for x in ourmodules %}
+    <li><b>{{ x.name }}</b><p>Price Details:  {{ x.Price }}</br>Descriptions: {{ x.Desc }}</p></li>
+  {% endfor %}
+</ul>
+{% endblock body %}
